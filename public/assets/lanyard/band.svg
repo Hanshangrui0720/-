@@ -1,0 +1,19 @@
+<svg width="160" height="320" viewBox="0 0 160 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="base" x1="0" x2="1">
+      <stop stop-color="#050608"/>
+      <stop offset=".38" stop-color="#24262a"/>
+      <stop offset=".62" stop-color="#111216"/>
+      <stop offset="1" stop-color="#030405"/>
+    </linearGradient>
+    <pattern id="weave" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 4H18M0 13H18" stroke="#70747a" stroke-opacity=".34" stroke-width="3"/>
+      <path d="M0 8H18M0 17H18" stroke="#020304" stroke-opacity=".62" stroke-width="2"/>
+      <path d="M0 1H18" stroke="#7b211d" stroke-opacity=".16" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="160" height="320" rx="7" fill="url(#base)"/>
+  <rect width="160" height="320" rx="7" fill="url(#weave)"/>
+  <path d="M12 0V320M148 0V320" stroke="#ffffff" stroke-opacity=".13" stroke-width="2"/>
+  <path d="M30 0V320M130 0V320" stroke="#000000" stroke-opacity=".58" stroke-width="2"/>
+</svg>

@@ -1,0 +1,81 @@
+.about .portrait {
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(243, 57, 44, .24);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 50% 16%, rgba(243, 57, 44, .26), transparent 38%),
+    linear-gradient(145deg, #211111, #08090c 64%);
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, .36),
+    inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.about .portrait img {
+  position: absolute;
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  filter: saturate(.9) contrast(.98);
+}
+
+.about .portrait::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, .36)),
+    linear-gradient(90deg, rgba(243, 57, 44, .12), transparent 28%, transparent 72%, rgba(243, 57, 44, .08));
+}
+
+.about .portrait span {
+  bottom: 28px;
+  left: 28px;
+  padding: 9px 12px;
+  border: 1px solid rgba(245, 241, 234, .18);
+  border-radius: 999px;
+  background: rgba(6, 6, 8, .62);
+  color: #f5f1ea;
+  backdrop-filter: blur(12px);
+}
+
+.about .portrait-noise {
+  z-index: 2;
+  opacity: .18;
+  mix-blend-mode: screen;
+}
+
+.about .portrait-orb {
+  display: none;
+}
+
+/* The portrait is now rendered by TiltedCard; keep legacy decorative layers out. */
+.about .portrait {
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.about .portrait .portrait-orb,
+.about .portrait .portrait-noise {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.about .portrait .tilted-card-figure {
+  overflow: visible;
+}
+
+.about .bio-detail {
+  flex-wrap: wrap;
+  row-gap: 22px;
+}
+
+.about .bio-detail > div {
+  min-width: 150px;
+}

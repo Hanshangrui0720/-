@@ -1,0 +1,3 @@
+.hero-lanyard-3d { position:absolute; z-index:4; top:0; left:0; width:100%; height:620px; pointer-events:auto; }
+.hero-lanyard-3d canvas { width:100% !important; height:100% !important; }
+@media (max-width:920px) { .hero-lanyard-3d { display:none; } }

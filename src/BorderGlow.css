@@ -1,0 +1,27 @@
+.border-glow-card {
+  --edge-proximity: 0;
+  --cursor-angle: 45deg;
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  isolation: isolate;
+  border: 1px solid rgba(245,241,234,.13);
+  border-radius: var(--border-radius, 10px);
+  background: var(--card-bg, transparent);
+  box-shadow: 0 20px 48px rgba(0,0,0,.15);
+}
+.border-glow-inner { position: relative; z-index: 1; }
+.border-glow-card::before, .border-glow-card::after, .border-glow-card .edge-light { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .28s ease; }
+.border-glow-card::before { z-index:2; inset:-1px; padding:1px; background:radial-gradient(170px circle at var(--pointer-x) var(--pointer-y), var(--color-three) 0%, var(--color-one) 24%, transparent 68%); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:var(--edge-proximity); }
+.border-glow-card::after { z-index:-2; inset:calc(var(--glow-padding, 24px) * -1); background:radial-gradient(140px circle at var(--pointer-x) var(--pointer-y), color-mix(in srgb, var(--color-one) 58%, transparent), transparent 72%); filter:blur(17px); opacity:calc(var(--edge-proximity) * var(--glow-intensity, 1)); }
+.border-glow-card .edge-light { inset:-1px; z-index:3; background:radial-gradient(125px circle at var(--pointer-x) var(--pointer-y), rgba(255,255,255,.25), transparent 72%); mix-blend-mode:screen; opacity:calc(var(--edge-proximity) * .45); }
+.border-glow-card.sweep-active::before { animation:border-glow-sweep 1.45s ease both; }
+@keyframes border-glow-sweep { 0% { opacity:0; } 35% { opacity:.9; } 100% { opacity:0; } }
+.works-border-glow { padding: 1px; }
+.works-border-glow .works-list { border-radius: calc(var(--border-radius) - 1px); overflow:hidden; }
+.certificates-border-glow { padding: 1px; }
+.capability-border-glow { padding: 1px; }
+.capability-border-glow .skills { border-radius: calc(var(--border-radius) - 1px); overflow:hidden; }
+.profile-border-glow { min-height: 100%; }
+.profile-border-glow .border-glow-inner { height: 100%; }
+.profile-border-glow .profile-spotlight { height: 100%; border-color: transparent; }

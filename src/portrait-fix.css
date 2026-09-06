@@ -1,0 +1,10 @@
+/* Final safeguard for the retired portrait orb: it must never render. */
+#about .portrait .portrait-orb,
+#about .portrait [class~='portrait-orb'] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
+}

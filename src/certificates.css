@@ -1,0 +1,37 @@
+.certificates {
+  padding-top: 96px;
+}
+
+.certificate-copy {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 420px);
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+
+.certificate-copy h2 {
+  margin: 0;
+  color: #f1f0eb;
+  font-size: clamp(56px, 7vw, 132px);
+  line-height: .88;
+  letter-spacing: -.07em;
+}
+
+.certificate-copy h2 em {
+  color: #f3392c;
+  font-style: normal;
+}
+
+.certificate-copy p {
+  margin: 0 0 12px;
+  color: #a9aaa8;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .certificate-copy {
+    grid-template-columns: 1fr;
+  }
+}

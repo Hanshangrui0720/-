@@ -1,0 +1,100 @@
+.hero-lanyard {
+  --red: #f3392c;
+  position: absolute;
+  z-index: 4;
+  top: 58px;
+  right: max(42px, calc((100vw - 1700px) / 2 + 52px));
+  width: 178px;
+  height: 345px;
+  pointer-events: none;
+}
+
+.lanyard-pin {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(7, 8, 10, .72), 0 0 18px rgba(243, 57, 44, .65);
+}
+
+.lanyard-strap {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 17px;
+  height: var(--rope-length);
+  overflow: hidden;
+  transform-origin: 50% 0;
+  transform: translateX(-50%) rotate(var(--rope-angle));
+  background: repeating-linear-gradient(180deg, #f3392c 0 7px, #b21d17 7px 11px, #111217 11px 15px);
+  box-shadow: 0 0 12px rgba(243, 57, 44, .28), inset 1px 0 rgba(255,255,255,.22), inset -1px 0 rgba(0,0,0,.42);
+  transition: transform .06s linear;
+}
+
+.lanyard-strap span {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  color: rgba(255,255,255,.84);
+  font: 700 5px/1 "DM Mono", monospace;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: translateX(-50%);
+}
+
+.lanyard-clasp {
+  position: absolute;
+  z-index: 2;
+  top: 145px;
+  left: calc(50% - 11px);
+  width: 22px;
+  height: 18px;
+  border: 2px solid #9b9b9b;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  transform-origin: 50% 0;
+  transform: translate(var(--offset-x), var(--offset-y)) rotate(var(--swing));
+}
+
+.lanyard-badge-card {
+  position: absolute;
+  z-index: 2;
+  top: 161px;
+  left: 50%;
+  width: 150px;
+  min-height: 174px;
+  padding: 15px 14px 14px;
+  border: 1px solid rgba(243, 57, 44, .82);
+  border-radius: 7px;
+  color: #f4f0e8;
+  text-align: left;
+  cursor: grab;
+  pointer-events: auto;
+  touch-action: none;
+  transform-origin: 50% -28px;
+  transform: translate(calc(-50% + var(--offset-x)), var(--offset-y)) rotate(var(--swing));
+  background:
+    linear-gradient(145deg, rgba(243,57,44,.18), transparent 42%),
+    radial-gradient(circle at 100% 0, rgba(243,57,44,.22), transparent 33%),
+    #101116;
+  box-shadow: 0 20px 38px rgba(0,0,0,.46), inset 0 1px rgba(255,255,255,.12);
+  transition: box-shadow .28s ease, border-color .28s ease;
+}
+
+.lanyard-badge-card:hover { border-color: #ff6a5e; box-shadow: 0 23px 42px rgba(0,0,0,.55), 0 0 24px rgba(243,57,44,.16), inset 0 1px rgba(255,255,255,.18); }
+.lanyard-badge-card:active { cursor: grabbing; }
+.lanyard-badge-card::after { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(255,255,255,.09); pointer-events: none; }
+.lanyard-badge-index,.lanyard-badge-role,.lanyard-badge-meta { display: block; font: 600 8px/1 "DM Mono", monospace; letter-spacing: .09em; }
+.lanyard-badge-index { color: var(--red); }
+.lanyard-badge-name { display: block; margin-top: 33px; font: 800 26px/1 "Microsoft YaHei UI", "PingFang SC", sans-serif; letter-spacing: -.08em; }
+.lanyard-badge-role { margin-top: 9px; color: #c9cac7; }
+.lanyard-badge-meta { margin-top: 40px; color: #8f908f; font-size: 7px; }
+.lanyard-badge-card i { position: absolute; right: 14px; bottom: 12px; color: var(--red); font-style: normal; }
+
+@media (max-width: 920px) { .hero-lanyard { display: none; } }

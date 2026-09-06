@@ -1,0 +1,188 @@
+.drag-cert-stage {
+  position: relative;
+  min-height: 780px;
+  overflow: hidden;
+  border: 1px solid rgba(243, 57, 44, .2);
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(243, 57, 44, .18), transparent 32%),
+    radial-gradient(circle at 78% 70%, rgba(255, 255, 255, .08), transparent 34%),
+    linear-gradient(135deg, rgba(18, 18, 20, .96), rgba(4, 4, 6, .98));
+  box-shadow: 0 30px 120px rgba(0, 0, 0, .45);
+  perspective: 3000px;
+}
+
+.drag-cert-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .32;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
+  background-size: 92px 92px;
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
+}
+
+.drag-cert-watermark {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  z-index: 0;
+  width: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+  padding: 18px 26px;
+  border: 1px solid rgba(245, 241, 234, .055);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .14);
+}
+
+.drag-cert-watermark span {
+  display: block;
+  color: rgba(243, 57, 44, .24);
+  font: 700 11px/1 "DM Mono", monospace;
+  letter-spacing: .22em;
+  opacity: 1;
+}
+
+.drag-cert-watermark strong {
+  display: block;
+  margin-top: 7px;
+  color: rgba(245, 241, 234, .18);
+  font: 800 13px/1 "DM Mono", monospace;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+
+.drag-cert-hint {
+  position: absolute;
+  right: 32px;
+  top: 28px;
+  z-index: 1;
+  color: rgba(245, 241, 234, .58);
+  font: 10px/1 "DM Mono", monospace;
+  letter-spacing: .14em;
+}
+
+.drag-card {
+  position: absolute;
+  z-index: 2;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.drag-card:active {
+  cursor: grabbing;
+}
+
+.cert-drag-card {
+  width: clamp(260px, 21vw, 370px);
+  padding: 10px;
+  border: 1px solid rgba(245, 241, 234, .18);
+  border-radius: 8px;
+  background: rgba(14, 14, 16, .84);
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, .5),
+    inset 0 1px 0 rgba(255, 255, 255, .08);
+  backdrop-filter: blur(18px);
+}
+
+.cert-drag-card img {
+  display: block;
+  width: 100%;
+  height: clamp(175px, 15.5vw, 250px);
+  object-fit: contain;
+  border-radius: 4px;
+  background: #e9e2d8;
+  pointer-events: none;
+}
+
+.cert-card-meta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  padding: 10px 10px 9px;
+  border: 1px solid rgba(245, 241, 234, .08);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, .42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+
+.cert-card-meta span {
+  color: #f3392c;
+  font: 900 28px/.86 Impact, Haettenschweiler, 'Arial Black', sans-serif;
+  letter-spacing: -.04em;
+}
+
+.cert-card-meta h3 {
+  margin: 0;
+  color: #f5f1ea;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .5);
+}
+
+.drag-card-glare {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at 40% 20%, rgba(255, 255, 255, .8), transparent 34%);
+  mix-blend-mode: screen;
+}
+
+.cert-position-1 { left: 5%; top: 32px; z-index: 5; }
+.cert-position-2 { left: 31%; top: 18px; z-index: 6; }
+.cert-position-3 { right: 26%; top: 42px; z-index: 5; }
+.cert-position-4 { right: 5%; top: 26px; z-index: 6; }
+.cert-position-5 { left: 13%; top: 246px; }
+.cert-position-6 { left: 39%; top: 232px; }
+.cert-position-7 { right: 11%; top: 250px; }
+.cert-position-8 { left: 4%; bottom: 46px; }
+.cert-position-9 { left: 35%; bottom: 34px; }
+.cert-position-10 { right: 8%; bottom: 48px; }
+
+@media (max-width: 900px) {
+  .drag-cert-stage {
+    min-height: 1100px;
+  }
+
+  .cert-drag-card {
+    width: 250px;
+  }
+
+  .cert-position-1,
+  .cert-position-4,
+  .cert-position-7,
+  .cert-position-10 {
+    right: auto;
+    left: 8%;
+  }
+
+  .cert-position-2,
+  .cert-position-5,
+  .cert-position-8 {
+    left: auto;
+    right: 8%;
+  }
+
+  .cert-position-1 { top: 64px; }
+  .cert-position-2 { top: 150px; }
+  .cert-position-3 { left: 12%; right: auto; top: 260px; }
+  .cert-position-4 { top: 370px; }
+  .cert-position-5 { top: 482px; }
+  .cert-position-6 { left: 14%; top: 592px; }
+  .cert-position-7 { top: 706px; }
+  .cert-position-8 { top: 820px; bottom: auto; }
+  .cert-position-9 { left: 14%; top: 930px; bottom: auto; }
+  .cert-position-10 { top: 1010px; bottom: auto; }
+}

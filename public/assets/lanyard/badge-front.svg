@@ -1,0 +1,92 @@
+<svg width="1024" height="1536" viewBox="0 0 1024 1536" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="plateBase" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#383a3e"/>
+      <stop offset=".28" stop-color="#515258"/>
+      <stop offset=".58" stop-color="#202227"/>
+      <stop offset="1" stop-color="#3f4146"/>
+    </linearGradient>
+    <linearGradient id="edgeLight" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8e918f" stop-opacity=".2"/>
+      <stop offset=".18" stop-color="#e2ded5" stop-opacity=".18"/>
+      <stop offset=".46" stop-color="#34363a" stop-opacity=".05"/>
+      <stop offset=".78" stop-color="#050607" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#787b78" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="redEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7d211d" stop-opacity=".82"/>
+      <stop offset=".5" stop-color="#c53a31" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#5d1816" stop-opacity=".8"/>
+    </linearGradient>
+    <radialGradient id="softReflect" cx=".72" cy=".26" r=".72">
+      <stop stop-color="#fff6e8" stop-opacity=".42"/>
+      <stop offset=".32" stop-color="#c4c6c0" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="leftReflect" cx=".18" cy=".22" r=".58">
+      <stop stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".04"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweepReflect" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".36" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#fff2dc" stop-opacity=".36"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".08"/>
+      <stop offset=".66" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lowerSheen" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".52" stop-color="#fff8ed" stop-opacity=".18"/>
+      <stop offset=".64" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="plateShadow" x="-22%" y="-16%" width="144%" height="134%">
+      <feDropShadow dx="0" dy="32" stdDeviation="28" flood-color="#000000" flood-opacity=".46"/>
+    </filter>
+    <filter id="subtleTextEdge" x="-6%" y="-8%" width="112%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.2" flood-color="#000000" flood-opacity=".72"/>
+    </filter>
+    <pattern id="brushed" width="1024" height="18" patternUnits="userSpaceOnUse">
+      <path d="M0 2H1024M0 9H1024M0 16H1024" stroke="#fff" stroke-opacity=".07" stroke-width="1"/>
+      <path d="M0 5H1024M0 13H1024" stroke="#000" stroke-opacity=".13" stroke-width="1"/>
+    </pattern>
+    <pattern id="microScratches" width="180" height="180" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M12 24H92M38 67H176M0 111H128M58 154H170" stroke="#fff" stroke-opacity=".05" stroke-width="1"/>
+      <path d="M20 43H126M80 88H154M34 136H98" stroke="#000" stroke-opacity=".1" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1024" height="1536" fill="none"/>
+  <g filter="url(#plateShadow)">
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#plateBase)"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#brushed)" opacity=".92"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#microScratches)" opacity=".55"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#softReflect)"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#leftReflect)"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#sweepReflect)" opacity=".9"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="url(#lowerSheen)" opacity=".75"/>
+    <rect x="44" y="56" width="936" height="1424" rx="54" fill="none" stroke="url(#edgeLight)" stroke-width="7" opacity=".74"/>
+    <rect x="68" y="80" width="888" height="1376" rx="38" fill="none" stroke="url(#redEdge)" stroke-width="4" opacity=".9"/>
+    <rect x="86" y="98" width="852" height="1340" rx="28" fill="none" stroke="#71736f" stroke-opacity=".12" stroke-width="2"/>
+
+    <circle cx="512" cy="130" r="52" fill="#090a0d" opacity=".86"/>
+    <circle cx="512" cy="130" r="42" fill="#17181c"/>
+    <circle cx="512" cy="130" r="25" fill="#050608"/>
+    <circle cx="512" cy="130" r="52" fill="none" stroke="#d8d1c7" stroke-opacity=".18" stroke-width="6"/>
+    <circle cx="512" cy="130" r="27" fill="none" stroke="#000" stroke-opacity=".62" stroke-width="6"/>
+
+    <text x="112" y="240" fill="#f0ece3" stroke="#050608" stroke-width="2.6" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="800" letter-spacing="6" filter="url(#subtleTextEdge)">HAN SHANGRUI</text>
+    <path d="M112 284H912" stroke="#cfc7bd" stroke-opacity=".28" stroke-width="3"/>
+
+    <text x="112" y="632" fill="#fff7ec" stroke="#020304" stroke-width="7" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="112" font-weight="900" letter-spacing="-2" filter="url(#subtleTextEdge)">WELCOME</text>
+    <text x="112" y="752" fill="#ec4b40" stroke="#020304" stroke-width="7" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="113" font-weight="900" letter-spacing="-2" filter="url(#subtleTextEdge)">TO MY SPACE</text>
+    <text x="116" y="826" fill="#f1ede4" stroke="#030407" stroke-width="2.8" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="800" letter-spacing="7" filter="url(#subtleTextEdge)">AI DESIGNER</text>
+
+    <circle cx="146" cy="1082" r="42" fill="#111216" stroke="#a7332d" stroke-opacity=".82" stroke-width="4"/>
+    <path d="M124 1082H168M146 1060V1104" stroke="#a7332d" stroke-width="8" stroke-linecap="round"/>
+
+    <text x="112" y="1384" fill="#f1ede4" stroke="#040507" stroke-width="1.8" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="800" letter-spacing="4">SHAOXING · 2026</text>
+    <text x="898" y="1386" fill="#ec4b40" stroke="#020304" stroke-width="4" paint-order="stroke" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="58" font-weight="900" text-anchor="end" filter="url(#subtleTextEdge)">韩尚睿</text>
+  </g>
+</svg>

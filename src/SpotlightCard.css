@@ -1,0 +1,38 @@
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255,255,255,.05);
+}
+
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(460px circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 72%);
+  opacity: 0;
+  transition: opacity .45s ease;
+  pointer-events: none;
+}
+
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before { opacity: .72; }
+
+.card-spotlight > * { position: relative; z-index: 1; }
+
+.profile-spotlight {
+  min-height: 100%;
+  padding: 34px 38px;
+  border: 1px solid rgba(245, 241, 234, .1);
+  border-radius: 12px;
+  background: rgba(16, 17, 22, .55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.profile-spotlight .bio { height: 100%; }
+
+@media (max-width: 800px) {
+  .profile-spotlight { padding: 22px; }
+}

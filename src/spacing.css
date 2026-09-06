@@ -1,0 +1,20 @@
+/* Tighter vertical rhythm between portfolio sections. */
+@media (min-width: 781px) {
+  .nav {
+    height: 60px;
+  }
+  .about .large-copy { font-size: clamp(23px, 2.15vw, 36px); line-height: 1.44; }
+  .section { padding-top: 112px; padding-bottom: 112px; }
+  .works { padding-top: 72px; }
+  .capability { padding-top: 118px; }
+  .section-head { padding-bottom: 40px; }
+  .about-grid { margin-top: 54px; grid-template-columns: 26% 1fr; gap: 7%; }
+  .capability h2 { margin-top: 48px; margin-bottom: 64px; }
+  .contact { padding-top: 142px; }
+}
+
+@media (max-width: 780px) {
+  .section { padding-top: 78px; padding-bottom: 78px; }
+  .about-grid { margin-top: 42px; }
+  .section-head { padding-bottom: 34px; }
+}

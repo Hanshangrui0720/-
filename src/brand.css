@@ -1,0 +1,23 @@
+.nav .brand {
+  color: #f3392c;
+  text-decoration: none;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC", Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .02em;
+  transform: skewX(-7deg);
+  text-shadow: 0 0 8px rgba(243, 57, 44, .22);
+}
+
+.brand-fold {
+  font-family: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  transform: inherit;
+}
+
+.nav .brand:hover {
+  color: #ff6a55;
+  text-shadow: 0 0 24px rgba(243, 57, 44, .52);
+}
