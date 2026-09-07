@@ -20,7 +20,10 @@ import './resume-experience.css'
 import './SpotlightGlobal.css'
 import './services.css'
 
-const asset = path => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+const asset = path => {
+  const [file, query] = path.replace(/^\//, '').split('?')
+  return `${import.meta.env.BASE_URL}${file}?v=20260907${query ? `&${query}` : ''}`
+}
 
 const works = [
   { id: '01', title: 'Synapse / 品牌智能体', type: 'Brand identity · 2025', className: 'work-one', image: asset('assets/works/inframe-art.png'), desc: '将复杂的 AI 能力转译为一套克制、可感知的品牌语言。' },

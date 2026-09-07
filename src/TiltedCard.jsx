@@ -13,7 +13,7 @@ export default function TiltedCard({ imageSrc, altText, captionText, overlayCont
   const captionY = useMotionValue(0)
   const captionOpacity = useSpring(0)
   const resolvedImageSrc = imageSrc.startsWith('/assets/')
-    ? `${import.meta.env.BASE_URL}${imageSrc.slice(1)}`
+    ? `${import.meta.env.BASE_URL}${imageSrc.slice(1)}?v=20260907`
     : imageSrc
 
   const handleMove = event => {
