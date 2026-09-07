@@ -101,11 +101,17 @@ function App() {
   useEffect(() => {
     const video = heroVideoRef.current
     const source = asset('assets/hero-video-web.mp4')
-    if (video && video.getAttribute('src') !== source) {
-      video.src = source
+    if (!video) return undefined
+
+    const loadVideo = () => {
+      video.setAttribute('src', source)
       video.load()
       video.play().catch(() => {})
     }
+
+    loadVideo()
+    const frame = window.requestAnimationFrame(loadVideo)
+    return () => window.cancelAnimationFrame(frame)
   }, [])
   const copyEmail = async () => { await navigator.clipboard?.writeText('hello@yourname.design'); setCopied(true); setTimeout(() => setCopied(false), 1800) }
   useEffect(() => {

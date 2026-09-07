@@ -1,6 +1,6 @@
 .hero-editorial .hero-media{filter:saturate(.68) brightness(.68) contrast(1.06);transform:scale(1.02)}
 .app .hero-media{background:var(--hero-fallback) center/cover}
-.hero-video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:0;transition:opacity .72s ease;background:#090a0d}
+.hero-video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:0;transition:opacity .72s ease;background:var(--hero-fallback) center/cover}
 .hero-video-ready .hero-video{opacity:1}
 .hero-editorial .hero-content{opacity:.001;transform:translateY(10px);transition:opacity .5s ease .08s,transform .5s ease .08s}
 .hero-video-ready .hero-content{opacity:1;transform:none}
