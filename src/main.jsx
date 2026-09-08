@@ -102,26 +102,6 @@ function App() {
   const [selectedCertificate, setSelectedCertificate] = useState(certificateNames[0])
   const heroVideoReady = true
   const [mediaPlaying, setMediaPlaying] = useState(false)
-  useEffect(() => {
-    if (!mediaPlaying) return undefined
-    let cancelled = false
-    const images = []
-    const queue = certificateCards.map(item => item.image)
-    const warmNext = () => {
-      if (cancelled || !queue.length) return
-      const image = new Image()
-      images.push(image)
-      image.fetchPriority = 'low'
-      image.onload = image.onerror = warmNext
-      image.src = queue.shift()
-    }
-    const delay = window.setTimeout(() => { warmNext(); warmNext() }, 1800)
-    return () => {
-      cancelled = true
-      window.clearTimeout(delay)
-      images.forEach(image => { image.onload = image.onerror = null })
-    }
-  }, [mediaPlaying])
   const copyEmail = async () => { await navigator.clipboard?.writeText('hello@yourname.design'); setCopied(true); setTimeout(() => setCopied(false), 1800) }
   useEffect(() => {
     const onKey = e => { if (e.key === 'Escape') setActiveWork(null) }
