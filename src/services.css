@@ -151,20 +151,6 @@
 .service-border-glow:hover .service-card::after { opacity: .62; transform: scale(1.06); }
 
 .service-coding .service-card {
-  background:
-    linear-gradient(180deg, rgba(6,8,13,.12) 0%, rgba(6,8,13,.3) 40%, rgba(5,6,8,.92) 100%),
-    linear-gradient(90deg, rgba(7,8,13,.12), rgba(7,8,13,.44)),
-    url('/assets/services/ai-coding-generated-v2.png') center / cover no-repeat;
-}
-
-.service-ppt .service-card {
-  background:
-    linear-gradient(180deg, rgba(28,12,10,.14) 0%, rgba(20,10,10,.32) 36%, rgba(6,7,10,.94) 100%),
-    linear-gradient(90deg, rgba(95,23,19,.2), rgba(4,5,8,.44)),
-    url('/assets/services/ppt-optimization-generated.png') center / cover no-repeat;
-}
-
-.service-coding .service-card {
   background-image:
     linear-gradient(180deg, rgba(6,8,13,.12) 0%, rgba(6,8,13,.3) 40%, rgba(5,6,8,.92) 100%),
     linear-gradient(90deg, rgba(7,8,13,.12), rgba(7,8,13,.44)),
