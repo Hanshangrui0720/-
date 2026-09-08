@@ -3,7 +3,7 @@ import { motion, useMotionValue, useSpring } from 'motion/react'
 import './TiltedCard.css'
 
 const spring = { damping: 26, stiffness: 135, mass: 1.25 }
-const ASSET_VERSION = '20260908'
+const ASSET_VERSION = '20260908-mobile'
 const imageAsset = file => file.replace(/\.(png|jpe?g)$/i, '.webp')
 
 export default function TiltedCard({ imageSrc, altText, captionText, overlayContent, rotateAmplitude = 8, scaleOnHover = 1.035 }) {

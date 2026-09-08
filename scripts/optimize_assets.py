@@ -23,7 +23,7 @@ def max_edge_for(path: Path) -> int:
     if "/works/" in text:
         return 1160
     if "/services/" in text:
-        return 1200
+        return 1400
     if path.name == "resume-portrait-soft.png":
         return 960
     return 1600
@@ -35,10 +35,11 @@ def optimize(path: Path) -> tuple[int, int]:
 
     output = path.with_suffix(".webp")
     before = path.stat().st_size
+    quality = 93 if "/services/" in path.as_posix() else 84
     with Image.open(path) as image:
         image = image.convert("RGBA" if image.mode in {"RGBA", "LA", "P"} else "RGB")
         image.thumbnail((max_edge_for(path), max_edge_for(path)), Image.Resampling.LANCZOS)
-        image.save(output, "WEBP", quality=84, method=6)
+        image.save(output, "WEBP", quality=quality, method=6)
     return before, output.stat().st_size
 
 
