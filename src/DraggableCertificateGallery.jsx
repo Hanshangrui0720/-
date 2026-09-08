@@ -92,7 +92,7 @@ export default function DraggableCertificateGallery({ items }) {
           constraintsRef={stageRef}
           className={`cert-drag-card cert-position-${index + 1}`}
         >
-          <img src={item.image} alt={item.alt} draggable="false" />
+          <img src={item.image} alt={item.alt} draggable="false" loading="lazy" decoding="async" />
           <div className="cert-card-meta">
             <span>{String(index + 1).padStart(2, '0')}</span>
             <h3>{item.label}</h3>
