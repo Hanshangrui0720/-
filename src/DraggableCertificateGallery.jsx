@@ -8,6 +8,7 @@ import {
   useVelocity,
 } from 'motion/react'
 import './DraggableCertificateGallery.css'
+import MediaImage from './MediaImage'
 
 const springConfig = {
   stiffness: 100,
@@ -92,7 +93,7 @@ export default function DraggableCertificateGallery({ items }) {
           constraintsRef={stageRef}
           className={`cert-drag-card cert-position-${index + 1}`}
         >
-          <img src={item.image} alt={item.alt} draggable="false" loading="lazy" decoding="async" />
+          <MediaImage src={item.image} fallbackSrc={item.fallbackSrc} alt={item.alt} draggable="false" />
           <div className="cert-card-meta">
             <span>{String(index + 1).padStart(2, '0')}</span>
             <h3>{item.label}</h3>

@@ -97,6 +97,7 @@
 .services-index i.active { background: var(--acid); border-color: var(--acid); box-shadow: 0 0 9px rgba(243,57,44,.7); }
 
 .services-content { min-width: 0; }
+.service-card > img.service-background-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; pointer-events: none; }
 
 .services-intro {
   display: flex;
